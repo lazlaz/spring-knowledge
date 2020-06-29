@@ -1,5 +1,8 @@
 wuhan2020: 2020年初武汉爆发了新型冠状病毒，疫情严重，但是，我相信一切都会过去！武汉加油！中国加油！
 
+server:
+  port: 9898
+  
 my-profile:
   name: Guide哥
   email: koushuangbwcx@163.com
