@@ -90,5 +90,6 @@
 		<module>shiro-kownledge</module>
 		<module>jwt-knowledge</module>
 		<module>base-knowledge</module>
+		<module>spring-security-knowledge</module>
 	</modules>
 </project>
