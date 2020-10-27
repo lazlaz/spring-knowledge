@@ -4,8 +4,8 @@ spring:
 
   datasource:
     username: root
-    password: rootadmin
-    url: jdbc:mysql://localhost:3306/h5demo?zeroDateTimeBehavior=convertToNull&useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&autoReconnect=true
+    password: root
+    url: jdbc:mysql://localhost:3306/test?zeroDateTimeBehavior=convertToNull&useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&autoReconnect=true
     continue-on-error: true
     sql-script-encoding: UTF-8
     driver-class-name: com.mysql.jdbc.Driver
@@ -27,6 +27,9 @@ spring:
       max-pool-prepared-statement-per-connection-size: 20
       use-global-data-source-stat: true
       filters: stat,wall,log4j2
+
+server :
+  port : 8050
 
 mybatis:
   type-aliases-package: com.fxbin.mybaits.*
