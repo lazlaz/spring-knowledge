@@ -92,5 +92,6 @@
 		<module>base-knowledge</module>
 		<module>spring-security-knowledge</module>
 		<module>distributed-transaction</module>
+		<module>spring-mq-knowledge</module>
 	</modules>
 </project>
