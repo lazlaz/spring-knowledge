@@ -93,5 +93,6 @@
 		<module>spring-security-knowledge</module>
 		<module>distributed-transaction</module>
 		<module>spring-mq-knowledge</module>
+		<module>sharding-sphere</module>
 	</modules>
 </project>
