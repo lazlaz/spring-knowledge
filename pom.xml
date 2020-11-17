@@ -94,5 +94,6 @@
 		<module>distributed-transaction</module>
 		<module>spring-mq-knowledge</module>
 		<module>sharding-sphere</module>
+		<module>demo-spring-boot-starter</module>
 	</modules>
 </project>
