@@ -13,12 +13,13 @@ public class UserService2 {
 	private UserDao udao;
 	@Transactional
 	public boolean test1(User user) throws Exception {
-		long id = user.getId();
-		System.out.println("查询的数据1:" + udao.findById(id));
-		// 新增两次，会出现主键ID冲突，看是否可以回滚该条数据
-		udao.insert(user);
-		System.out.println("查询的数据2:" + udao.findById(id));
-		//udao.insert(user);
+		System.out.println(this);
+			long id = user.getId();
+			System.out.println("查询的数据1:" + udao.findById(id));
+			// 新增两次，会出现主键ID冲突，看是否可以回滚该条数据
+			udao.insert(user);
+			System.out.println("查询的数据2:" + udao.findById(id));
+			udao.insert(user);
 		return false;
 	}
 }

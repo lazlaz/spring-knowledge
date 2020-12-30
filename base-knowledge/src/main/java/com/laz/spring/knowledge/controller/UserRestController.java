@@ -15,7 +15,9 @@ public class UserRestController {
 
 	@Autowired
 	private UserService2 userService;
-
+	public UserService2 getUserService() {
+		return userService;
+	}
 	@PostMapping("/test1")
 	public boolean test1(@RequestBody User user) {
 		System.out.println("请求参数:" + user);
