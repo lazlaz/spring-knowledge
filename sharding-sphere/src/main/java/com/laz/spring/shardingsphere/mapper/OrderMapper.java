@@ -16,4 +16,6 @@ public interface OrderMapper {
 
     void insert(OrderDO order);
 
+	List<OrderDO> selectByName(@Param("name") String name);
+
 }

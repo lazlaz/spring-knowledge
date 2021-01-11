@@ -23,6 +23,12 @@ public class OrderMapperTest {
         OrderDO order = orderMapper.selectById(1);
         System.out.println(order);
     }
+    
+    @Test
+    public void testSelectByName() {
+        List<OrderDO> order = orderMapper.selectByName("test");
+        System.out.println(order);
+    }
 
     @Test
     public void testSelectListByUserId() {
