@@ -16,12 +16,14 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.laz.spring.knowledge.domain.Book;
 
+import io.swagger.annotations.Api;
+
 @RestController
 @RequestMapping("/api")
 public class BookController {
 	private List<Book> books = new ArrayList<>();
 
-    @PostMapping("/book")
+    @PostMapping(path="/book",name="swagger测试")
     public ResponseEntity<List<Book>> addBook(@RequestBody Book book) {
         books.add(book);
         return ResponseEntity.ok(books);

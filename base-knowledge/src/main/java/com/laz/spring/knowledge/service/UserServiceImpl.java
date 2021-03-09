@@ -17,6 +17,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public Object listAll(int page, int size) {
+    	System.out.println(userMapper);
         List<User> userList = userMapper.listAll();
         return userList;
     }
