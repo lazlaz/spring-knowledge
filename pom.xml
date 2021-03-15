@@ -127,5 +127,6 @@
 		<module>sharding-sphere</module>
 		<module>demo-spring-boot-starter</module>
 		<module>sentinel-knowledge</module>
+		<module>zipkin-knowledge</module>
 	</modules>
 </project>
