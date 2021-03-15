@@ -45,6 +45,35 @@ public class HelloWorldSentinelController {
         flowRule.setCount(1);
 
         flowRules.add(flowRule);
+        
+        /**
+         * 定义 helloSentinelV2 受保护的资源的规则
+         */
+        //创建流控规则对象
+        FlowRule flowRule2 = new FlowRule();
+        //设置流控规则 QPS
+        flowRule2.setGrade(RuleConstant.FLOW_GRADE_QPS);
+        //设置受保护的资源
+        flowRule2.setResource("helloSentinelV2");
+        //设置受保护的资源的阈值
+        flowRule2.setCount(1);
+
+        flowRules.add(flowRule2);
+        
+        /**
+		 * 定义 helloSentinelV3 受保护的资源的规则
+		 */
+		// 创建流控规则对象
+		FlowRule flowRule3 = new FlowRule();
+		// 设置流控规则 QPS
+		flowRule3.setGrade(RuleConstant.FLOW_GRADE_QPS);
+		// 设置受保护的资源
+		flowRule3.setResource("helloSentinelV3");
+		// 设置受保护的资源的阈值
+		flowRule3.setCount(1);
+
+		flowRules.add(flowRule3);
+        
 
         //加载配置好的规则
         FlowRuleManager.loadRules(flowRules);

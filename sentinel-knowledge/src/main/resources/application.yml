@@ -1,0 +1,21 @@
+spring:
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.5.9:8848
+    sentinel:
+      transport:
+        dashboard: 127.0.0.1:8080
+        port: 8179 # 默认8179 如果被占用会自动加1依次开始扫描，直到找到未注册端口
+  application:
+    name: sentinel-server
+  main:
+    allow-bean-definition-overriding: true
+    
+server:
+  port: 8877
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
