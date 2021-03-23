@@ -128,5 +128,6 @@
 		<module>demo-spring-boot-starter</module>
 		<module>sentinel-knowledge</module>
 		<module>zipkin-knowledge</module>
+		<module>mybatis-plus-knowledge</module>
 	</modules>
 </project>
