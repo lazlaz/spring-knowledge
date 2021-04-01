@@ -9,4 +9,7 @@ SpringKnowLedgeApplication
 ##3 Spring 事务示例
 [SpringBoot事物Transaction实战讲解教程](https://www.cnblogs.com/xuwujing/p/11184162.html)
 
+##4 增加Spring示例打包成镜像并发布到K8s示例
+[springboot版本helloworld发布到k8s示例](https://juejin.cn/post/6844903892694597640)
+
 
