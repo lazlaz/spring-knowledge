@@ -1,0 +1,45 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.laz</groupId>
+    <artifactId>sofa-ark-knowledge</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <artifactId>learn-serviceone</artifactId>
+  
+  <dependencies>
+        <dependency>
+            <groupId>com.laz</groupId>
+            <artifactId>myjar</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>com.alipay.sofa</groupId>
+                <artifactId>sofa-ark-plugin-maven-plugin</artifactId>
+                <version>0.6.0</version>
+                <executions>
+                    <execution>
+                        <id>default-cli</id>
+                        <goals>
+                            <goal>ark-plugin</goal>
+                        </goals>
+
+                        <configuration>
+                            <!-- configure exported class -->
+                            <exported>
+                                <!-- configure class-level exported class -->
+                                <classes>
+                                    <class>com.laz.sofa.ark.knowledge.ServiceOne</class>
+                                </classes>
+                            </exported>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>

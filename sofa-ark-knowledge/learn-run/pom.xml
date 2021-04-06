@@ -1,0 +1,78 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.laz</groupId>
+    <artifactId>sofa-ark-knowledge</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <artifactId>learn-run</artifactId>
+  
+    <dependencies>
+<!--        只作用于编译器-->
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>learn-serviceone</artifactId>
+            <version>${project.version}</version>
+           <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>learn-servicetwo</artifactId>
+            <version>${project.version}</version>
+            <scope>provided</scope>
+        </dependency>
+
+<!--        实际执行的是 ark-plugin-->
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>learn-serviceone</artifactId>
+            <version>${project.version}</version>
+            <classifier>ark-plugin</classifier>
+        </dependency>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>learn-servicetwo</artifactId>
+            <version>${project.version}</version>
+            <classifier>ark-plugin</classifier>
+        </dependency>
+
+        <dependency>
+            <groupId>com.alipay.sofa</groupId>
+            <artifactId>sofa-ark-support-starter</artifactId>
+            <version>0.6.0</version>
+        </dependency>
+    <dependency>
+            <groupId>com.alipay.sofa</groupId>
+            <artifactId>sofa-ark-container</artifactId>
+            <version>0.6.0</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>com.alipay.sofa</groupId>
+                <artifactId>sofa-ark-maven-plugin</artifactId>
+                <version>0.6.0</version>
+                <executions>
+                    <execution>
+                        <id>default-cli</id>
+
+                        <!--goal executed to generate executable-ark-jar -->
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                        <configuration>
+                            <!--specify destination where executable-ark-jar will be saved, default saved to ${project.build.directory}-->
+                            <outputDirectory>./target</outputDirectory>
+
+                            <!--default none-->
+                            <arkClassifier>executable-ark</arkClassifier>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
+        </plugins>
+    </build>
+</project>
