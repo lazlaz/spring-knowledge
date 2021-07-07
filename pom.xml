@@ -132,5 +132,6 @@
 		<module>mybatis-plus-knowledge</module>
 		<module>oauth2-knowledge</module>
 		<module>sofa-ark-knowledge</module>
+		<module>webflux-knoowledge</module>
 	</modules>
 </project>
